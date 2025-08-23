@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>blog</title>
+      <link>https://abusten.github.io</link>
+      <description>Last 10 notes on blog</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Markdown文档编写</title>
+    <link>https://abusten.github.io/CTF/Markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99</link>
+    <guid>https://abusten.github.io/CTF/Markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99</guid>
+    <description><![CDATA[ 从今天开始也是正式用上markdown了，感觉写笔记是比较方便，在这之前还是先学习一下语法吧 感觉markdown最方便的地方就是想插入不同的字体只要记住不同标识就行，不用像其他的软件一样来回换。 比如想用标题可以按一个井号 就像这样 加粗的话这样**就行了 而且还能跨平台 还是先贴一个官方文档：markdown.com.cn 以下是markdown的语法： 基本语法: 这些是 John Gruber 的原始设计文档中列出的元素。所有 Markdown 应用程序都支持这些元素。 元素Markdown 语法标题（Heading）# H1 ## H2 ### H3粗体（Bold）**bold te... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://abusten.github.io/CTF/</link>
+    <guid>https://abusten.github.io/CTF/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>[NCTF2024 X1crypsc]记录一道有意思的题目</title>
+    <link>https://abusten.github.io/CTF/misc/%5BNCTF2024-X1crypsc%5D%E8%AE%B0%E5%BD%95%E4%B8%80%E9%81%93%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E9%A2%98%E7%9B%AE</link>
+    <guid>https://abusten.github.io/CTF/misc/%5BNCTF2024-X1crypsc%5D%E8%AE%B0%E5%BD%95%E4%B8%80%E9%81%93%E6%9C%89%E6%84%8F%E6%80%9D%E7%9A%84%E9%A2%98%E7%9B%AE</guid>
+    <description><![CDATA[  PS:因为红明谷和NCTF时间重了导致想起来打这个这个比赛时已经快结束了就没太认真打，看到一个挺有意思的misc的题一看分数还挺高就想着挑战一下，结果遗憾离场。 看了wp我才发现原来还有misc题目能用web的方法解决 题目的源码如下： from random import * import time import pyfiglet text = &quot;X1crypsc&quot; ascii_art = pyfiglet.figlet_format(text) print(ascii_art) time.sleep(1) print(&#039;[+]I want to play a... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>关于一道简单的异或问题</title>
+    <link>https://abusten.github.io/CTF/misc/%E5%85%B3%E4%BA%8E%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%BC%82%E6%88%96%E9%97%AE%E9%A2%98</link>
+    <guid>https://abusten.github.io/CTF/misc/%E5%85%B3%E4%BA%8E%E4%B8%80%E9%81%93%E7%AE%80%E5%8D%95%E7%9A%84%E5%BC%82%E6%88%96%E9%97%AE%E9%A2%98</guid>
+    <description><![CDATA[ 这道题是春秋杯冬季赛时做到的，虽然比较简单但还是记录一下 题目：简单异或 题目内容：ysxdg/m@]mjkz@vl@zlf&gt;b 一开始直接让ai写了脚本爆破，发现没爆出来，于是根据已知优化了一下 # 输入字符串 input_string = &quot;ys~xdg/m@]mjkz@vl@z~lf&gt;b&quot; # 已知输出的开头 known_output = &quot;flag&quot; # 用于存储推测出来的异或密钥 key = [] # 根据已知的输出和输入的前几个字符推测密钥 for i in range(len(known_output)): key.append... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>关于各种QR码的总结</title>
+    <link>https://abusten.github.io/CTF/misc/%E5%85%B3%E4%BA%8E%E5%90%84%E7%A7%8DQR%E7%A0%81%E7%9A%84%E6%80%BB%E7%BB%93</link>
+    <guid>https://abusten.github.io/CTF/misc/%E5%85%B3%E4%BA%8E%E5%90%84%E7%A7%8DQR%E7%A0%81%E7%9A%84%E6%80%BB%E7%BB%93</guid>
+    <description><![CDATA[  很基础的东西，但是我太菜了，所以还是总结一下 1.条形码 2.二维码 3.PDF417码 4.汉信码 5.Aztec码 6.Data Matrix 要解析这些码，如果是联网环境只需要放进谷歌识图里，如果是内网环境那用QR pro就行。. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>如何识别和处理CRC爆破问题</title>
+    <link>https://abusten.github.io/CTF/misc/%E5%A6%82%E4%BD%95%E8%AF%86%E5%88%AB%E5%92%8C%E5%A4%84%E7%90%86CRC%E7%88%86%E7%A0%B4%E9%97%AE%E9%A2%98</link>
+    <guid>https://abusten.github.io/CTF/misc/%E5%A6%82%E4%BD%95%E8%AF%86%E5%88%AB%E5%92%8C%E5%A4%84%E7%90%86CRC%E7%88%86%E7%A0%B4%E9%97%AE%E9%A2%98</guid>
+    <description><![CDATA[ 一.CRC码的原理 循环冗余校验码简称CRC码,是目前使用非常广泛的数据校验方式.它不仅能校验传递过来的数据正确性,还能筛查出哪一位出现了错误.它的局限性是只能校验一位数据发生跳变,在现实世界当中数据发生跳变很大很大的概率只有一位发生变化,因此CRC码也拥有很大的发挥舞台. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>NepCTF 2025 writeup</title>
+    <link>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/NepCTF-2025-writeup</link>
+    <guid>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/NepCTF-2025-writeup</guid>
+    <description><![CDATA[ web easyGooGooVVVY poc: import groovy.lang.GroovyShell; import groovy.lang.Script; import java.io.File; public class GroovyShellExample { public static void main( String[] args ) throws Exception { GroovyShell groovyShell = new GroovyShell(); Script script = groovyShell.parse(new File(&quot;/proc/se... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>SCTF2024  web havefun</title>
+    <link>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/SCTF2024--web-havefun</link>
+    <guid>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/SCTF2024--web-havefun</guid>
+    <description><![CDATA[  这道题做了快两天都没头绪，比赛结束看wp复现才发现原来还能这么做，遂写一篇笔记 一、题目描述 打开题目容器，只显示“ Please go to /static/SCTF.jpg ”，没有其他任何提示。，访问/static/SCTF.jpg发现是一张图片。 我做题时在这之后就访问了/robots.txt，还真让我搞到了后台管理系统的路径 之后还通过弱密码（admin和admin123456）搞到了管理员账号，结果到这就卡住了，虽然管理系统有文件上传的功能，但是无论上传什么文件都没法执行命令，·. ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>[ACTF 2025]upload _ 复现</title>
+    <link>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/%5BACTF-2025%5Dupload-_-%E5%A4%8D%E7%8E%B0</link>
+    <guid>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/%5BACTF-2025%5Dupload-_-%E5%A4%8D%E7%8E%B0</guid>
+    <description><![CDATA[ 首先进入题目的是一个登录页面/login 不过这个登录页面对后面的步骤没有任何关系，不存在什么admin账号能有更多权限和功能之类的，我记得我在比赛时是用sql万能密码登录的，不过如果复现时的源码和比赛时一模一样的话，应该输入什么都行 登录后是一个文件上传功能/upload 这个功能我在比赛时试着传了半天php马，我也不知道当初怎么想的就认定是php了，可能是题目这种过于简洁的前端页面让我下意识的以为这一定是php题，最终当然是没有成功，不过上传过程中发现了一个读任意文件的漏洞 好吧现在我已经确定复现题目和原来比赛环境不一样了 后面的复现不来我就在这里记录一下吧 在./upload/file_... ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item><item>
+    <title>[NCTF 2024]ez_dash _ 复现</title>
+    <link>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/%5BNCTF-2024%5Dez_dash-_-%E5%A4%8D%E7%8E%B0</link>
+    <guid>https://abusten.github.io/CTF/web/%E5%81%9A%E9%A2%98%E7%AC%94%E8%AE%B0/%5BNCTF-2024%5Dez_dash-_-%E5%A4%8D%E7%8E%B0</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 23 Aug 2025 14:12:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
