@@ -55,7 +55,6 @@ docker build -t 镜像name -f dockerfile文件名
 **二.具体步骤**
 
 > _(由于我的电脑c盘空间不够用了，在wsl里搞这些有点占空间，所以以下步骤我都是在虚拟机里做的）_
->
 
 部署题目时大多是有个Dockerfile文件的，先在Dockerfile所在文件夹里打开控制台，首先进root，然后docker build拉镜像，这一步如果之前没下载过类似于php或nginx的镜像但是运行需要（具体得看dockerfile怎么写的）的话还要联外网下载，不然这一步会失败，如果失败的话主机代理记得开Tun，之后如果想检查拉镜像是否成功可以docker images看看
 

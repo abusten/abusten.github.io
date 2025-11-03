@@ -1,4 +1,48 @@
 > *学到哪记哪* 
+# 关键字
+## this与super
+### this
+this是自身的一个对象，可以看作是一个指向对象本身的指针
+### super
+super可以理解为指向自己最近的一个父类的指针
+### 用法总结
+1. 都可以直接引用，相当与指向自己或自己的父类
+2. 类的函数形参与类的成员名同名或父类的成员变量或方法与子类的同名时用以区分
+3. **3.引用构造函数**
+	- **super(参数)**：调用父类中的某一个构造函数（应该为构造函数中的第一条语句）。
+	- **this(参数)**：调用本类中另一种形式的构造函数（应该为构造函数中的第一条语句）。
+## 缓存池
+*前置知识:Integer是Java中的一个封装类，用于表示整数。它是int的封装类，可以将int类型的数据转换为Integer类型的数据。Integer类提供了许多操作整数的方法，使得整数的操作更加方便和灵活。作为int的封装类，储存在内存的堆中的对象里。Integer.valueOf(int i)这个方法是返回一个表示指定int值的实例*
+- `new Integer(18)` 每次都会新建一个对象;
+- `Integer.valueOf(18)` 会使⽤用缓存池中的对象，多次调用只会取同⼀一个对象的引用。
+```java
+Integer x = new Integer(18); 
+Integer y = new Integer(18); 
+System.out.println(x == y); 
+
+Integer z = Integer.valueOf(18); 
+Integer k = Integer.valueOf(18); 
+System.out.println(z == k); 
+
+Integer m = Integer.valueOf(300); 
+Integer p = Integer.valueOf(300); 
+System.out.println(m == p);
+```
+输出结果为
+```
+false 
+true 
+false
+```
+valueOf() 方法的实现比较简单，就是先判断值是否在缓存池中，如果在的话就直接返回缓存池的内容。
+```
+public static Integer valueOf(int i) {
+    if (i >= IntegerCache.low && i <= IntegerCache.high)
+        return IntegerCache.cache[i + (-IntegerCache.low)];
+    return new Integer(i);
+}
+```
+在 Java 8 中，Integer 缓存池的大小默认为 -128~127。因此由于18命中缓存池，valueOf()没有创建新对象，z和k才能相等。
 ## 接口
 - 普通类：只有具体实现
 - 抽象类：具体实现和规范（抽象方法）都有

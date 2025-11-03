@@ -1,4 +1,4 @@
-**一.preg_replace**
+# **一.preg_replace**
 
 ```php
 mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int $limit = -1 [, int &$count ]] )
@@ -34,11 +34,11 @@ mixed preg_replace ( mixed $pattern , mixed $replacement , mixed $subject [, int
 
 只要在sub中匹配pat的内容，并在rep前加上/e修正符，就能执行rep参数赋值的php代码，例如
 
-`<font style="color:rgb(179, 103, 103);">?pat=/abc/e&rep=</font><font style="color:rgb(227, 95, 156);">system(</font><font style="color:rgb(255, 122, 48);">'ls')&</font><font style="color:rgb(227, 95, 156);">sub</font><font style="color:rgb(200, 195, 188);">=</font><font style="color:rgb(134, 109, 172);">abc</font>`
+<font style="color:rgb(179, 103, 103);">?pat=/abc/e&rep=</font><font style="color:rgb(227, 95, 156);">system(</font><font style="color:rgb(255, 122, 48);">'ls')&</font><font style="color:rgb(227, 95, 156);">sub</font><font style="color:rgb(200, 195, 188);">=</font><font style="color:rgb(134, 109, 172);">abc</font>
 
 就能成功执行system('ls')。
 
-**二.assert()**
+# **二.assert()**
 
 `assert(mixed $assertion, Throwable|string|null $description = null): bool`
 
@@ -52,7 +52,7 @@ assert()函数其实是一个断言函数。
 
 （例题详见我的做题笔记：攻防世界 mfw)
 
-**三.in_array()**
+# **三.in_array()**
 
 `in_array(mixed $needle, array $haystack, bool $strict = false): bool`
 
@@ -62,7 +62,7 @@ assert()函数其实是一个断言函数。
 
 （例如$needle=7shell.php会强制转换为$needle=7再进行比较)
 
-**四.is_numeric()**
+# **四.is_numeric()**
 
 `bool is_numeric ( mixed $var )`
 
